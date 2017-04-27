@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Acelerômetro</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h3>Acelerômetro</h3>
+
+  <div *ngIf="dados">
+
+  <ion-card>
+    <ion-card-header>X</ion-card-header>
+    <ion-card-content>{{ dados.x }}</ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>Y</ion-card-header>
+    <ion-card-content>{{ dados.y }}</ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>Z</ion-card-header>
+    <ion-card-content>{{ dados.z }}</ion-card-content>
+  </ion-card>
+
+  </div>
+
+  <ion-card *ngIf="!loading && !dados">
+    <ion-card-header>Erro!</ion-card-header>
+    <ion-card-content>Não foi possível carregar os dados do acelerômetro!</ion-card-content>
+  </ion-card>
+</ion-content>
