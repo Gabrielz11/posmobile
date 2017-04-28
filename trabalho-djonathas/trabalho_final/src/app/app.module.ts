@@ -4,7 +4,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
+import { MapsPage } from '../pages/maps/maps';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -15,7 +15,7 @@ import {DeviceMotion} from "@ionic-native/device-motion";
   declarations: [
     MyApp,
     HomePage,
-    ListPage
+    MapsPage
   ],
   imports: [
     BrowserModule,
@@ -25,7 +25,7 @@ import {DeviceMotion} from "@ionic-native/device-motion";
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage
+    MapsPage
   ],
   providers: [
     StatusBar,

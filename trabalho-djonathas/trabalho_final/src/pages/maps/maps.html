@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>List</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="coordenadas" padding>
+    <b>latitude:</b> {{ coordenadas.latitude }}<br>
+    <b>longitude:</b> {{ coordenadas.longitude }}
+  </div>
+</ion-content>
