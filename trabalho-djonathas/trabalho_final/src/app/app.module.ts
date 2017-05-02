@@ -9,6 +9,7 @@ import { MapsPage } from '../pages/maps/maps';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import {DeviceMotion} from "@ionic-native/device-motion";
+import { Geolocation } from '@ionic-native/geolocation';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import {DeviceMotion} from "@ionic-native/device-motion";
     StatusBar,
     SplashScreen,
     DeviceMotion,
+    Geolocation,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
