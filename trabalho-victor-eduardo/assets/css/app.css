@@ -1,0 +1,84 @@
+body {
+    font: 24px Helvetica;
+    background: #fff;
+    }
+
+    #main {
+        min-height: 740px;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-flow: row;
+    }
+ 
+    #main > article {
+        padding: 5px;
+        background: #ffc107 ;
+        flex: 3 1 60%;
+        order: 2;
+    }
+
+    #main > nav {
+        padding: 5px;
+        background: #673ab7;
+        flex: 1 6 20%;
+        order: 1;
+    }
+  
+    #main > aside {
+        padding: 5px;
+        background: #673ab7;
+        flex: 1 6 20%;
+        order: 3;
+    }
+ 
+    header, footer {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-around;
+        min-height: 100px;
+        background: #2196f3;
+        color: #fff;
+    }
+
+    header a, footer a,
+    header h4, footer h4  {
+        color: #fff;
+        display: flex;
+        align-items: center;
+    }
+
+    .app-navbar-item {
+        width: 100%;
+        display: flex;
+        justify-content: center 
+    }
+
+    .page-1 {
+        background-color: #9C27B0 !important;
+    }
+
+    .page-2 {
+        background-color: #CDDC39 !important;
+    }
+
+    .page-3 {
+        background-color: #FF5722 !important;
+    }
+    
+    /* Too narrow to support three columns */
+    @media all and (max-width: 640px) {
+        #main, #page {
+            flex-direction: column;
+        }
+
+        #main > article, #main > nav, #main > aside {
+        /* Return them to document order */
+            order: 0;
+        }
+  
+        #main > nav, #main > aside, header, footer {
+            min-height: 50px;
+            max-height: 50px;
+        }
+    }
