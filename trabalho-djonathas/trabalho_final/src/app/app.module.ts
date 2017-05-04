@@ -5,18 +5,21 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { MapsPage } from '../pages/maps/maps';
+import { PessoasPage } from '../pages/pessoas/pessoas';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import {DeviceMotion} from "@ionic-native/device-motion";
+import { DeviceMotion } from "@ionic-native/device-motion";
 import { Geolocation } from '@ionic-native/geolocation';
 import { GoogleMaps } from '@ionic-native/google-maps';
+import { Contacts } from '@ionic-native/contacts';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    MapsPage
+    MapsPage,
+    PessoasPage
   ],
   imports: [
     BrowserModule,
@@ -26,7 +29,8 @@ import { GoogleMaps } from '@ionic-native/google-maps';
   entryComponents: [
     MyApp,
     HomePage,
-    MapsPage
+    MapsPage,
+    PessoasPage
   ],
   providers: [
     StatusBar,
@@ -34,6 +38,7 @@ import { GoogleMaps } from '@ionic-native/google-maps';
     DeviceMotion,
     Geolocation,
     GoogleMaps,
+    Contacts,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
