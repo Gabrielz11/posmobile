@@ -31,6 +31,17 @@ export class MyApp {
 
   initializeApp() {
     this.platform.ready().then(() => {
+
+      let db;
+      // Abrindo o banco de dados
+      let request = window.indexedDB.open("myDB", 1);
+      request.onerror = function(event) {
+        alert("Database error: " + request.error.toString());
+      };
+      request.onsuccess = function(event) {
+        db = request.result;
+      };
+
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
