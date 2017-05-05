@@ -10,16 +10,19 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
+
     <ion-title>Pessoas</ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="goToNovo()">
+        <ion-icon name="add-circle"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-  <ion-list *ngIf="contactsList">
-    <button ion-item *ngFor="let contact of contactsList">
-      {{ contact.id }} - {{ contact.name.formatted }}
-    </button>
-  </ion-list>
+
 </ion-content>

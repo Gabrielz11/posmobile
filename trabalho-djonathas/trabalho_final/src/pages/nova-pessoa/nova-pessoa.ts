@@ -1,28 +1,30 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
-import { NovaPessoaPage } from '../nova-pessoa/nova-pessoa';
+import { ContatosPage } from '../contatos/contatos';
 
 /**
- * Generated class for the Pessoas page.
+ * Generated class for the NovaPessoa page.
  *
  * See http://ionicframework.com/docs/components/#navigation for more info
  * on Ionic pages and navigation.
  */
 @Component({
-  selector: 'page-pessoas',
-  templateUrl: 'pessoas.html',
+  selector: 'page-nova-pessoa',
+  templateUrl: 'nova-pessoa.html',
 })
-export class PessoasPage {
+export class NovaPessoaPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+
   }
 
   ionViewDidLoad() {
-
+    console.log('ionViewDidLoad NovaPessoa');
   }
 
-  goToNovo() {
-    this.navCtrl.push(NovaPessoaPage);
+  showContacts() {
+    this.navCtrl.push(ContatosPage);
   }
+
 }

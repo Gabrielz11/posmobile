@@ -6,6 +6,8 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { MapsPage } from '../pages/maps/maps';
 import { PessoasPage } from '../pages/pessoas/pessoas';
+import { NovaPessoaPage } from '../pages/nova-pessoa/nova-pessoa';
+import { ContatosPage } from '../pages/contatos/contatos';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -19,7 +21,9 @@ import { Contacts } from '@ionic-native/contacts';
     MyApp,
     HomePage,
     MapsPage,
-    PessoasPage
+    PessoasPage,
+    NovaPessoaPage,
+    ContatosPage
   ],
   imports: [
     BrowserModule,
@@ -30,7 +34,9 @@ import { Contacts } from '@ionic-native/contacts';
     MyApp,
     HomePage,
     MapsPage,
-    PessoasPage
+    PessoasPage,
+    NovaPessoaPage,
+    ContatosPage
   ],
   providers: [
     StatusBar,
