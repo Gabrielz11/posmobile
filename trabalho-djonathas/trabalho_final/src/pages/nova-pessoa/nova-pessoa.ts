@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import {Component} from "@angular/core";
+import {NavController, NavParams} from "ionic-angular";
+import {DBManager} from "../../providers/db-manager";
 
-import { ContatosPage } from '../contatos/contatos';
+import {ContatosPage} from "../contatos/contatos";
 
 /**
  * Generated class for the NovaPessoa page.
@@ -15,7 +16,10 @@ import { ContatosPage } from '../contatos/contatos';
 })
 export class NovaPessoaPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  public nome: string;
+  public telefone: string;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public dbManager: DBManager) {
 
   }
 
@@ -25,6 +29,24 @@ export class NovaPessoaPage {
 
   showContacts() {
     this.navCtrl.push(ContatosPage);
+  }
+
+  salvar() {
+    let funcao = db => {
+      let transaction = db.transaction("pessoas", "readwrite").objectStore("pessoas");
+
+      let op = transaction.add({"nome": this.nome, "telefone": this.telefone});
+
+      op.onerror = function (event) {
+        alert("erro")
+      };
+
+      op.onsuccess = function (event) {
+        alert("inserido com sucesso!")
+      };
+    };
+
+    this.dbManager.run(funcao)
   }
 
 }
