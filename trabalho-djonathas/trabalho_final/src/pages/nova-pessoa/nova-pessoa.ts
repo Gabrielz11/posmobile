@@ -31,22 +31,29 @@ export class NovaPessoaPage {
     this.navCtrl.push(ContatosPage);
   }
 
-  salvar() {
-    let funcao = db => {
-      let transaction = db.transaction("pessoas", "readwrite").objectStore("pessoas");
+  clearInputs = () => {
+    this.nome = "";
+    this.telefone = "";
+  };
 
+  save() {
+    let callback = db => {
+      let transaction = db.transaction("pessoas", "readwrite").objectStore("pessoas");
       let op = transaction.add({"nome": this.nome, "telefone": this.telefone});
 
       op.onerror = function (event) {
-        alert("erro")
+        alert(op.error)
       };
 
       op.onsuccess = function (event) {
         alert("inserido com sucesso!")
       };
+
+      this.nome = "";
+      this.telefone = "";
     };
 
-    this.dbManager.run(funcao)
+    this.dbManager.run(callback)
   }
 
 }

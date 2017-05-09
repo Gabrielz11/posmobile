@@ -10,13 +10,14 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class DBManager {
 
-  constructor() {
-    console.log('Hello DBManager Provider');
-  }
+  dbName = "myDB";
+  dbVersion = 1;
+
+  constructor() {}
 
   initDB() {
     // Abrindo o banco de dados
-    let request = window.indexedDB.open("myDB", 1);
+    let request = window.indexedDB.open(this.dbName, this.dbVersion);
 
     request.onerror = function (event) {
       alert("Database error: " + request.error);
@@ -32,17 +33,16 @@ export class DBManager {
     };
   }
 
-  run(funcao) {
+  run(callback) {
     // Abrindo o banco de dados
-    let request = window.indexedDB.open("myDB", 1);
+    let request = window.indexedDB.open(this.dbName, this.dbVersion);
 
     request.onerror = function (event) {
       alert("Database error: " + request.error);
     };
 
     request.onsuccess = function (event) {
-      let db = request.result;
-      funcao(db)
+      callback(request.result)
     };
   }
 }
