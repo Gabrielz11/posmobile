@@ -26,10 +26,13 @@ export class DBManager {
     request.onupgradeneeded = function (event) {
       let db = request.result;
 
-      let objectStore = db.createObjectStore("pessoas", {autoIncrement: true});
+      let objectStore = db.createObjectStore("pessoas", {keyPath: "id", autoIncrement: true});
 
       objectStore.createIndex("nome", "nome");
+      objectStore.createIndex("endereco", "endereco");
       objectStore.createIndex("telefone", "telefone", {unique: true});
+
+      db.close()
     };
   }
 

@@ -3,6 +3,7 @@ import {NavController, NavParams} from "ionic-angular";
 import {DBManager} from "../../providers/db-manager";
 
 import {ContatosPage} from "../contatos/contatos";
+import {Pessoa} from "../../classes/Pessoa";
 
 /**
  * Generated class for the NovaPessoa page.
@@ -12,12 +13,11 @@ import {ContatosPage} from "../contatos/contatos";
  */
 @Component({
   selector: 'page-nova-pessoa',
-  templateUrl: 'nova-pessoa.html',
+  templateUrl: 'create.html',
 })
-export class NovaPessoaPage {
+export class PessoaCreatePage {
 
-  public nome: string;
-  public telefone: string;
+  public pessoa:Pessoa = new Pessoa();
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public dbManager: DBManager) {
 
@@ -31,26 +31,23 @@ export class NovaPessoaPage {
     this.navCtrl.push(ContatosPage);
   }
 
-  clearInputs = () => {
-    this.nome = "";
-    this.telefone = "";
-  };
-
   save() {
     let callback = db => {
       let transaction = db.transaction("pessoas", "readwrite").objectStore("pessoas");
-      let op = transaction.add({"nome": this.nome, "telefone": this.telefone});
+
+      let op = transaction.add(this.pessoa);
 
       op.onerror = function (event) {
-        alert(op.error)
+        alert(op.error);
+        db.close()
       };
 
       op.onsuccess = function (event) {
-        alert("inserido com sucesso!")
+        alert("inserido com sucesso!");
+        db.close()
       };
 
-      this.nome = "";
-      this.telefone = "";
+      this.pessoa = new Pessoa()
     };
 
     this.dbManager.run(callback)

@@ -21,12 +21,17 @@
 
     <ion-item>
       <ion-label stacked>Nome</ion-label>
-      <ion-input type="text" [(ngModel)]="nome"></ion-input>
+      <ion-input type="text" [(ngModel)]="pessoa.nome"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Endereço</ion-label>
+      <ion-input type="text" [(ngModel)]="pessoa.endereco"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label stacked>Telefone</ion-label>
-      <ion-input type="tel" [(ngModel)]="telefone"></ion-input>
+      <ion-input type="tel" [(ngModel)]="pessoa.telefone"></ion-input>
     </ion-item>
 
     <ion-item>

@@ -6,7 +6,7 @@ import {DBManager} from "../providers/db-manager";
 
 import {HomePage} from "../pages/home/home";
 import {MapsPage} from "../pages/maps/maps";
-import {PessoasPage} from "../pages/pessoas/pessoas";
+import {PessoaListPage} from "../pages/pessoas/list";
 
 @Component({
   templateUrl: 'app.html'
@@ -24,7 +24,7 @@ export class MyApp {
     this.pages = [
       {title: 'Acelerômetro', component: HomePage},
       {title: 'Maps', component: MapsPage},
-      {title: 'Pessoas', component: PessoasPage}
+      {title: 'Pessoas', component: PessoaListPage}
     ];
 
   }

@@ -24,7 +24,15 @@
 
 
 <ion-content padding>
-<ion-list>
-  <ion-item *ngFor="let pessoa of pessoas">{{ pessoa.nome }} ({{ pessoa.telefone }})</ion-item>
-</ion-list>
+  <ion-list *ngIf="pessoas">
+    <ion-card *ngIf="pessoas.length == 0">
+      <ion-card-content>Não há registros ainda!</ion-card-content>
+    </ion-card>
+
+    <button ion-item *ngFor="let pessoa of pessoas" (click)="showPessoaDetails(pessoa)">{{ pessoa.nome }}</button>
+  </ion-list>
+
+  <ion-card *ngIf="!pessoas">
+    <ion-card-content>Não há registros ainda!</ion-card-content>
+  </ion-card>
 </ion-content>

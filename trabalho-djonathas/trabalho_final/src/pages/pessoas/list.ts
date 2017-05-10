@@ -1,8 +1,10 @@
 import {Component} from "@angular/core";
-import {NavController, NavParams} from "ionic-angular";
+import {NavController} from "ionic-angular";
 import {DBManager} from "../../providers/db-manager";
 
-import {NovaPessoaPage} from "../nova-pessoa/nova-pessoa";
+import {PessoaCreatePage} from "./create";
+import {PessoaDetailsPage} from "./details";
+import {Pessoa} from "../../classes/Pessoa";
 
 /**
  * Generated class for the Pessoas page.
@@ -12,19 +14,19 @@ import {NovaPessoaPage} from "../nova-pessoa/nova-pessoa";
  */
 @Component({
   selector: 'page-pessoas',
-  templateUrl: 'pessoas.html',
+  templateUrl: 'list.html',
 })
-export class PessoasPage {
+export class PessoaListPage {
 
-  public pessoas;
+  public pessoas:Pessoa[];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public dbManager: DBManager) {
+  constructor(public navCtrl: NavController, public dbManager: DBManager) {
     let callback = db => {
       let transaction = db.transaction("pessoas", "readwrite").objectStore("pessoas");
       let op = transaction.getAll();
 
       let setPessoas = (pessoas) => {
-        this.pessoas = pessoas
+        this.pessoas = pessoas;
       };
 
       op.onerror = function (event) {
@@ -44,6 +46,10 @@ export class PessoasPage {
   }
 
   goToNovo() {
-    this.navCtrl.push(NovaPessoaPage);
+    this.navCtrl.push(PessoaCreatePage);
+  }
+
+  showPessoaDetails(pessoa:Pessoa) {
+    this.navCtrl.push(PessoaDetailsPage, pessoa);
   }
 }
