@@ -1,0 +1,40 @@
+@import url("colors.less");
+
+#tela_login > div.conteudo {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid red;
+    flex: 1;
+}
+
+#form_login {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 30vh;
+}
+
+input {
+  outline: none;
+  padding: 12px;
+  border-radius: 3px;
+  border: 1px solid @darkColor;
+  font-size: 13px;;
+}
+
+::-webkit-input-placeholder { /* Chrome */
+  color: red;
+  transition: opacity 250ms ease-in-out;
+}
+:focus::-webkit-input-placeholder {
+  opacity: 0.5;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: red;
+  transition: opacity 250ms ease-in-out;
+}
+:focus:-ms-input-placeholder {
+  opacity: 0.5;
+}

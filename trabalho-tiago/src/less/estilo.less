@@ -1,0 +1,49 @@
+@base: #f938ab;
+@colorGray: #666666;
+@colorLightGray: #888888;
+@colorDanger: #ff0000;
+@colorOrange: orange;
+@colorDarkGray: #ddd;
+@colorWhite: #FFFFFF;
+@colorEEE: #eee;
+
+body {
+  font-family: Arial;
+   color: @colorOrange;
+}
+section {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+label {
+  background: @colorEEE;
+  border: 1px solid @colorDarkGray;
+  padding: .7em 1em;
+  cursor: pointer;
+  z-index: 1;
+  margin-left: -1px;
+}
+label:first-of-type {
+  margin-left: 0;
+}
+div {
+  width: 100%;
+  margin-top: -1px;
+  padding: 1em;
+  border: 1px solid @colorDarkGray;
+  -webkit-order: 1;
+  order: 1;
+}
+input[type=radio], div {
+  display: none;
+}
+input[type=radio]:checked + label {
+  background: @colorWhite;
+  border-bottom: 1px solid @colorWhite;
+}
+input[type=radio]:checked + label + div {
+  display: block;
+}

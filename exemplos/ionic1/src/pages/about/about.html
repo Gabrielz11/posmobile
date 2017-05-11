@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Tela Sobre
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list *ngIf="users">
+    <button ion-item *ngFor="let user of users">
+      {{user.gender}}
+    </button>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,184 @@
+// Cores
+@colorBranco: #FFFFFF;
+@colorBlue: #4197ee;
+
+// Outros estilos
+@border: 1px solid @colorLightGray;
+@borderRadius: 0.25em;
+@borderColorActive: #3CB371;
+@boxShadowActive: inset 0 1px 1px rgba(0,0,0,.075), 0 0 0.2em rgba(60,179,113, 0.6);
+@boxShadowDanger: inset 0 1px 1px rgba(0,0,0,.075), 0 0 0.2em rgba(255,0,0, 0.6);
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+@baseFontDir: '../third/fonts/Ubuntu';
+
+* {
+    box-sizing: border-box;
+    font-family: 'arial';
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    color: @colorGray;
+}
+
+//Activity
+div.activity {
+    display: none;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+
+  	//App Bar
+    div.appbar {
+	    width: 100vw;
+	    height: 8vh;
+	    background: @colorBlue;
+	    display: flex;
+	    flex-direction: column;
+	    justify-content: center;
+
+      	//App Bar Title
+	    span.app-title {
+	    	font-size: 16px;
+	    	font-weight: bold;
+	    	color: #FFF;
+	    	margin-left: 16px;
+      	}
+	}
+
+	//Body do App
+	div.appcontent {
+		width: 100vw;
+		height: 100vh;
+		background: @colorBranco;
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+.activity-main {
+	display: flex !important;
+}
+
+div.container {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+div.container_botao {
+	width: 100vw;
+	height: 50vh;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+div.container_contapagar {
+	width: 100vw;
+	height: 70vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+span.welcome-text {
+	font-size: 24px;
+	font-weight: bold;
+	color: #4682B4;
+}
+
+a.button {
+	text-decoration: none;
+	margin-top: 16px;
+	margin-bottom: 16px;
+	padding: 10px;
+	color: @colorBlue;
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	border-radius: 2px;
+}
+
+a.button-raised {
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	font-weight: bold;
+}
+
+
+.css_btn_class {
+	font-size:16px;
+	font-family:Times New Roman;
+	font-weight:bold;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	border:1px solid #469df5;
+	padding:9px 18px;
+	text-decoration:none;
+	background:-moz-linear-gradient( center top, #79bbff 5%, #4197ee 100% );
+	background:-ms-linear-gradient( top, #79bbff 5%, #4197ee 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#79bbff', endColorstr='#4197ee');
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(5%, #79bbff), color-stop(100%, #4197ee) );
+	background-color:#79bbff;
+	color:#ffffff;
+	display:inline-block;
+	text-shadow:1px 1px 0px #287ace;
+ 	-webkit-box-shadow:inset 1px 1px 0px 0px #cae3fc;
+ 	-moz-box-shadow:inset 1px 1px 0px 0px #cae3fc;
+ 	box-shadow:inset 1px 1px 0px 0px #cae3fc;
+}.css_btn_class:hover {
+	background:-moz-linear-gradient( center top, #4197ee 5%, #79bbff 100% );
+	background:-ms-linear-gradient( top, #4197ee 5%, #79bbff 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#4197ee', endColorstr='#79bbff');
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(5%, #4197ee), color-stop(100%, #79bbff) );
+	background-color:#4197ee;
+}.css_btn_class:active {
+	position:relative;
+	top:1px;
+}
+
+.input {
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  padding: 10px 20px;
+  border: 1px solid #b7b7b7;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  font: normal 16px/normal "Times New Roman", Times, serif;
+  color: rgba(0,142,198,1);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: rgba(252,252,252,1);
+  -webkit-box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) inset;
+  box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) inset;
+  text-shadow: 1px 1px 0 rgba(255,255,255,0.66) ;
+  -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+}

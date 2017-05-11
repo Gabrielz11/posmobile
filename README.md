@@ -2,6 +2,22 @@
 
 Toda a bibliografia referente à disciplina está em links no slide. Acesse em: [https://paulocanedo.github.io/posmobile](https://paulocanedo.github.io/posmobile)
 
+# avaliacao final
+* 2.0 1a avaliacao
+* 1.0 localStorage
+* 1.5 acelerometro
+* 1.5 geolocation
+* 1.5 maps
+* 1.5 contatos
+* 1.0 Media
+* 2.0 Camera
+* 2.0 http
+* 3.0 IndexedDB, SQLite, WebSQL
+
+O trabalho final (apenas o final) poderá ser feito de dupla, ou trio (nesse caso haverá desconto de 2.0 pontos do montante)
+
+* http://blog.ionic.io/handling-cors-issues-in-ionic/
+
 ## 1a avaliação:
 ### Construir a interface de um aplicativo seguindo as seguintes regras:
 * usar HTML, CSS(pode usar flexbox e/ou gridlayout) e Javascript

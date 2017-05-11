@@ -1,0 +1,167 @@
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Meu Banco</title>
+    <meta name="description" content="App Bancária">
+    <meta name="author" content="Bruno Freitas">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+</head>
+
+<body>
+    <div id="tela_login" class="container" style="display: none;">
+        <header>
+            <h1>Minha App</h1>
+        </header>
+        <div class="conteudo">
+            <div>
+                <h2>Informe login e senha</h2>
+            </div>
+            <form>
+                <div id="form_login">
+                    <input type="text" id="usuario" placeholder="Login">
+                    <input type="text" id="usuario" placeholder="Senha">
+                    <button type="submit">Login</button>
+                </div>
+            </form>
+        </div>
+        <footer>
+            Não tem uma conta? <a href="#">Registre-se.</a>
+        </footer>
+    </div>
+    <div id="tela_contas" class="container" style="display: none;">
+        <header class="titulo_logado">
+            <div class="voltar">
+                <a href="#" class="voltar"><</a>
+            </div>
+            <div class="titulo_tela">
+                <h1>Contas</h1>
+            </div>
+        </header>
+        <div class="conteudo">
+            <div>
+                <h2>Selecione uma conta</h2>
+            </div>
+            <div id="lista_contas">
+                <div class="conta">
+                    <div class="logo">
+                        <img src="img/icone-bb.png">
+                    </div>
+                    <div class="info">
+                        <div>Banco do Brasil</div>
+                        <div>Ag. 1000-0</div>
+                        <div>CC. 1253-5</div>
+                        <div>Saldo: R$ 500,00</div>
+                    </div>
+                </div>
+                <div class="conta">
+                    <div class="logo">
+                        <img src="img/icone-cef.png">
+                    </div>
+                    <div class="info">
+                        <div>Caixa Econômica Federal</div>
+                        <div>Ag. 1000-0</div>
+                        <div>CC. 1253-5</div>
+                        <div>Saldo: R$ 500,00</div>
+                    </div>
+                </div>
+                <div class="conta">
+                    <div class="logo">
+                        <img src="img/icone-bradesco.jpg">
+                    </div>
+                    <div class="info">
+                        <div>Bradesco</div>
+                        <div>Ag. 1000-0</div>
+                        <div>CC. 1253-5</div>
+                        <div>Saldo: R$ 500,00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            Total: R$ 1.500,00
+        </footer>
+    </div>
+    <div id="tela_extrato" class="container">
+        <header class="titulo_logado">
+            <div class="voltar">
+                <a href="#" class="voltar"><</a>
+            </div>
+            <div class="titulo_tela">
+                <h1>Extrato de conta</h1>
+            </div>
+        </header>
+
+        <div class="conteudo">
+            <div>
+                <h2>Saldo anterior: R$ 200,00</h2>
+            </div>
+            <div id="lista_transacoes">
+                <div class="transacao credito">
+                    <div class="data">
+                        18/04/2017
+                    </div>
+                    <div class="descricao">
+                        Depósito
+                    </div>
+                    <div class="valor">
+                        R$ 100,00
+                    </div>
+                </div>
+                <div class="transacao credito">
+                    <div class="data">
+                        19/04/2017
+                    </div>
+                    <div class="descricao">
+                        Transf. Entrada
+                    </div>
+                    <div class="valor">
+                        R$ 300,00
+                    </div>
+                </div>
+                <div class="transacao debito">
+                    <div class="data">
+                        20/04/2017
+                    </div>
+                    <div class="descricao">
+                        Saque
+                    </div>
+                    <div class="valor">
+                        R$ 150,00
+                    </div>
+                </div>
+                <div class="transacao credito">
+                    <div class="data">
+                        20/04/2017
+                    </div>
+                    <div class="descricao">
+                        Transf. Entrada
+                    </div>
+                    <div class="valor">
+                        R$ 100,00
+                    </div>
+                </div>
+                <div class="transacao debito">
+                    <div class="data">
+                        20/04/2017
+                    </div>
+                    <div class="descricao">
+                        Transf. Saída
+                    </div>
+                    <div class="valor">
+                        R$ 50,00
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            Saldo: R$ 500,00
+        </footer>
+    </div>
+    <script src="js/build.js"></script>
+</body>
+
+</html>

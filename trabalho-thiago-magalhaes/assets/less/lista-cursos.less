@@ -1,0 +1,23 @@
+@import url("colors.less");
+
+div.curso {
+    border-bottom: 1px solid @corPrimaria;
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+}
+
+div.curso > div.valor {
+    text-align: right;
+    flex-grow: 1;
+    color: @cursoColor;
+}
+
+div.curso > div.data {
+    flex-shrink: 1;
+}
+
+div.curso > div.descricao {
+    padding-left: 8px;
+    flex-grow: 2;
+}

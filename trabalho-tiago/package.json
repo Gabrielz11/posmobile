@@ -1,0 +1,23 @@
+{
+  "name": "TiagoWork",
+  "version": "1.0.0",
+  "description": "Trabalho da pós Tiago Farias",
+  "main": "www/index.html",
+  "dependencies": {
+    "gulp": "~3.9.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-clean": "^0.3.2",
+    "gulp-connect": "^5.0.0",
+    "gulp-less": "^3.3.0",
+    "gulp-minify": "0.0.15",
+    "babel-cli": "~6.24.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tiago Farias",
+  "license": "BSD-2-Clause"
+}

@@ -1,0 +1,16 @@
+{
+  "name": "trabalho-euvaldo",
+  "version": "1.0.0",
+  "description": "trabalho 1 da pós",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "euvaldocosta",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-less": "^3.3.0"
+  }
+}

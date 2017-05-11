@@ -1,0 +1,27 @@
+{
+  "name": "plataformas_hibridas_1",
+  "version": "1.0.0",
+  "description": "Trabalho da disciplina de Plataformas Híbridas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/brunosavyofs/plataformas_hibridas_1.git"
+  },
+  "author": "Bruno",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/brunosavyofs/plataformas_hibridas_1#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-less": "^3.3.0",
+    "gulp-minify": "0.0.15",
+    "gulp-server": "^0.1.0",
+    "gulp-uglify": "^2.1.2"
+  }
+}

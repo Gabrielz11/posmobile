@@ -1,0 +1,25 @@
+{
+  "name": "avaliacao1pos",
+  "version": "1.0.0",
+  "description": "Trabalho 1 da disciplina de Plataformas Híbridas",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {
+    "gulp-less": "^3.3.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexsilvadoprado/avaliacao1pos.git"
+  },
+  "author": "alexprado",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexsilvadoprado/avaliacao1pos/issues"
+  },
+  "homepage": "https://github.com/alexsilvadoprado/avaliacao1pos#readme"
+}

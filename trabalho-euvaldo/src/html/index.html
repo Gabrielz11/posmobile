@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	  <title>APP</title>
+	  <meta name="author" content="euvaldocosta">
+	  <link rel="stylesheet" href="assets/css/app.css">
+	</head>
+
+	<body>
+
+		<div class="activity activity-main" id="welcome-activity">
+			<div class="appcontent">
+				<div class="container">
+					<img src="assets/image/contasapagar.jpg">
+					<span class="welcome-text">Contas a Pagar</span>
+					<br/><br/>
+					<a href="#" class="css_btn_class" id="btn-entrar">ENTRAR</a>
+				</div>
+			</div>
+		</div>
+	  
+		<div class="activity" id="tela-principal">
+			<div class="appbar">
+				<span class="app-title">CONTAS A PAGAR</span>
+			</div>
+			<div class="appcontent">
+				<div class="container_botao">
+					<a href="#" class="button button-raised" id="btn-cadastrar-conta">ADICIONAR CONTA</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="activity" id="tela-cadastrar-conta">
+			<div class="appbar">
+				<span class="app-title">CADASTRO DA CONTA</span>
+			</div>
+			<div class="appcontent">
+				<div class="container_contapagar">
+					 <label for="descricao">Descrição</label><br/>
+  					 <input type="input" class="input" id="descricao" autofocus><br/>
+  					 <label for="dataPagar">Data para Pagar</label><br/>
+  					 <input type="input" class="input" id="dataPagar" data-mask="00/00/0000"><br/>
+  					 <label for="valor">Valor (R$)</label><br/>
+  					 <input type="input" class="input" id="valor">
+				</div><br/><br/>
+				<div class="container_botao">
+				<a href="#" class="button button-raised" id="btn-adicionar">ADICIONAR</a>
+				<a href="#" class="button button-raised" id="btn-voltar">VOLTAR</a>
+				</div>
+			</div>
+		</div>
+
+	</body>
+	<script src="assets/js/app.js"></script>
+</html>

@@ -1,0 +1,138 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    color: #666;
+    font-weight: bold;
+
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2vh 4vw;
+}
+
+footer > p {
+    margin: 0;
+    text-align: center;
+    background-color: white;
+    border: 0;
+    font-weight: bold;
+}
+
+footer > p:before {
+    display: block;
+}
+
+.activity {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+}
+
+.titulo {
+  text-align: center;
+  grid-column-start: 1;
+  background-color: #CCC;
+}
+
+//------------------------css tela calendario---------------------
+.tela_calendario {
+  border: 5px solid #CCC;
+  display: grid;
+  flex-direction: column;
+  flex-grow: 1;
+  grid-column-gap: 1px;
+  grid-row-gap: 1px;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: 50px auto auto auto auto auto auto;
+}
+
+.tela_calendario > .titulo, .dias_semana {
+  grid-column-end: 8;
+}
+
+.box {
+  border: 2px solid #333;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 150%;
+  text-align: right;
+}
+
+
+//-----------------------css tela contatos-----------------------
+.tela_contatos {
+  border: 5px solid #CCC;
+  display: grid;
+  flex-direction: column;
+  flex-grow: 1;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: 50px auto;
+}
+
+.lista {
+   grid-column-start: 1;
+}
+
+.linha {
+  border-bottom: 2px solid #333;
+}
+
+//------------------------css tela novo-------------------------
+.tela_novo {
+  border: 5px solid #CCC;
+  display: grid;
+  flex-direction: column;
+  flex-grow: 1;
+  grid-template-rows: 50px auto;
+}
+
+.tela_novo * {
+  box-sizing: border-box;
+}
+
+.formulario {
+  list-style-type: none;
+  padding: 0;
+  max-width: 800px;
+  margin: 0 auto;
+  border: 2px solid #333;
+}
+
+.formulario li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.formulario li:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.formulario li label {
+  padding: 8px;
+}
+
+.formulario > li > label {
+  flex: 1 0 120px;
+  max-width: 220px;
+}
+
+.formulario > li > label + * {
+  flex: 1 0 220px;
+}
+
+.formulario > li > button {
+  margin: auto;
+  margin-bottom: 5px;
+  padding: 8px 16px;
+  border: none;
+  background: #333;
+  color: #f2f2f2;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 2px;
+}

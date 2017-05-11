@@ -1,0 +1,65 @@
+@import url("colors.less");
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: @cleanColor;
+}
+
+div.container {
+    flex-direction: column;
+    display: flex;
+    min-height: 100vh;
+}
+
+header,
+footer
+{
+    text-align: center;
+}
+
+header,
+footer {
+    background-color: @darkColor;
+    color: white;
+}
+
+footer {
+    margin-top: auto;
+    padding: 10px;
+    min-height: 25px;
+}
+
+header.titulo_logado {
+    display: flex;
+    flex-direction: row;
+}
+
+header.titulo_logado > div.voltar {
+    padding-left: 5px;
+    align-self: center;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+header.titulo_logado > div.titulo_tela {
+    flex-grow: 1;
+}
+
+button {
+    background-color: @darkColor; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 2px;
+}
+
+a.voltar {
+    color: white;
+    text-decoration: none;
+}

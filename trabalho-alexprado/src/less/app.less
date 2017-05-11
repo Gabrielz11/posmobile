@@ -1,0 +1,130 @@
+//Código less do app
+
+// Cores
+@colorGray: #666666;
+@colorLightGray: #888888;
+@colorDanger: #ff0000;
+@colorOrange: orange;
+@colorGreen: #4CAF50;
+@colorLightBlue: #28aadc;
+@colorConfirm: @colorGreen;
+
+// Outros estilos
+@border: 1px solid @colorLightGray;
+@borderRadius: 0.25em;
+@borderColorActive: #3CB371;
+@boxShadowActive: inset 0 1px 1px rgba(0,0,0,.075), 0 0 0.2em rgba(60,179,113, 0.6);
+@boxShadowDanger: inset 0 1px 1px rgba(0,0,0,.075), 0 0 0.2em rgba(255,0,0, 0.6);
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+@baseFontDir: '../third/fonts/Ubuntu';
+
+* {
+    box-sizing: border-box;
+    font-family: 'arial';
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    color: @colorGray;
+}
+
+//Activity
+div.activity {
+    display: none;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+
+  	//App Bar
+    div.appbar {
+	    width: 100vw;
+	    height: 8vh;
+	    background: @colorOrange;
+	    display: flex;
+	    flex-direction: column;
+	    justify-content: center;
+
+      	//App Bar Title
+	    span.app-title {
+	    	font-size: 16px;
+	    	font-weight: bold;
+	    	color: #FFF;
+	    	margin-left: 16px;
+      	}
+	}
+
+	//Body do App
+	div.appcontent {
+		width: 100vw;
+		height: 100vh;
+		background: @colorGray;
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+.activity-main {
+	display: flex !important;
+}
+
+// Container Base
+div.container {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+// Texto de Apresentação
+span.welcome-text {
+	font-size: 24px;
+	font-weight: bold;
+	color: #FFF;
+}
+
+// Botão
+a.button {
+	text-decoration: none;
+	margin-top: 16px;
+	margin-bottom: 16px;
+	padding: 10px;
+	color: @colorOrange;
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	border-radius: 2px;
+}
+
+// Botão Suspenso
+a.button-raised {
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	font-weight: bold;
+}
+
+// Botão shake
+.button-shake {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}

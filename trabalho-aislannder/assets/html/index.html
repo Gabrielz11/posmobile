@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Projeto Hibdrido Pos-Graduação</title>
+    <link rel="stylesheet" href="css/estilo.css">
+  </head>
+  <body>
+      <div class="box">
+        <div class="grid header"></div>
+
+        <div id="conteudo1" class="grid conteudo1" style="display:block;">
+          <div class="container-conteudo1">
+          <div class="item-1 box">Foto 1</div>
+            <div class="item-2 box">Foto 2</div>
+            <div class="item-3 box">Foto 3</div>
+          	<div class="item-4 box">Foto 4</div>
+            <div class="item-5 box">Foto 5</div>
+            <div class="item-6 box">Foto 6</div>
+          </div>
+        </div>
+        <div id="conteudo2" class="grid conteudo2" style="display:none;">
+          <div class="wrapper-conteudo2">
+                  <div class="tituloarea box">
+                    <h2>Noticia</h2>
+                  </div>
+                  <div class="coluna1 box">
+                    <h3>O que é Lorem Ipsum?</h3>
+                    <p>Lorem Ipsum é simplesmente.</p>
+                    <p>Lorem Ipsum sobreviveu não.</p>
+                  </div>
+
+                  <div class="coluna2 box">
+                    <h3>Benefícios Lorem Ipsum.</h3>
+                    <p class="">Em algumas agências no 90 circulou um texto chamado "bonde amarelo" ou "metrô amarelo" sensata substituir Lorem Ipsum para dar um visual mais moderno para o conteúdo.</p>
+                  </div>
+          </div>
+        </div>
+        <div id="conteudo3" class="grid conteudo3" style="display:none;">
+          <div class="wrapper-conteudo2">
+                  <div class="tituloarea box">
+                    <h2>Noticia</h2>
+                  </div>
+                  <div class="coluna1 box">
+                  </div>
+                  <div class="coluna2 box">
+                  </div>
+          </div>
+        </div>
+
+        <div class="grid footer">
+          <button id="tab1" onclick="MudarConteudo(this.id)">TELA 1</button>
+          <button id="tab2" onclick="MudarConteudo(this.id)">TELA 2</button>
+          <button id="tab3" onclick="MudarConteudo(this.id)">TELA 3</button>
+        </div>
+      </div>
+  <script src="/js/app.js"></script>
+  </body>
+</html>

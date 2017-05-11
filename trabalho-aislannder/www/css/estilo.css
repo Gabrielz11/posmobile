@@ -1,0 +1,118 @@
+/*
+    red: #E73F3F
+    orange: #F76C27
+    yellow: #E7E737
+    blue: #6D9DD1
+    purple: #7E45D3
+*/
+body {
+  margin: 0;
+  font-family: Arial;
+  background-color: #f2f2f2;
+}
+.box {
+  color: #7e45d3;
+  padding: 1em;
+  text-align: center;
+  background-color: #efefef;
+}
+button {
+  width: 100%;
+  padding: 1em;
+  outline: none;
+  border: 1px solid #f2f2f2;
+}
+.conteudo1 {
+  display: flex;
+  margin: 0 auto;
+  position: relative;
+  height: 90vh;
+  background: #f5c531;
+  color: #fff;
+  padding: 5px;
+  font-size: 1rem;
+}
+.container-conteudo1 {
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+}
+.item-1 {
+  background-color: #1abc9c;
+}
+.item-2 {
+  background-color: #16a085;
+}
+.item-3 {
+  background-color: #2ecc71;
+}
+.item-4 {
+  background-color: #27ae60;
+}
+.item-5 {
+  background-color: #feb474;
+}
+.item-6 {
+  background-color: #ffcca0;
+}
+.conteudo2 {
+  display: flex;
+  margin: 0 auto;
+  position: relative;
+  height: 90vh;
+  color: #fff;
+  font-size: 1rem
+  background: #898989;
+}
+.tituloarea {
+  grid-area: tituloarea;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row: 1;
+}
+.coluna1 {
+  grid-area: coluna1;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row: 2;
+}
+.coluna2 {
+  grid-area: coluna2;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row: 2;
+}
+.wrapper-conteudo2 {
+  display: grid;
+  grid-area: wrapper;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto ;
+  grid-template-areas: "tituloarea" "coluna1" "coluna2";
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row: 2;
+  padding: 10px;
+  background-color: #6D9DD1;
+}
+.conteudo3 {
+  display: flex;
+  margin: 0 auto;
+  position: relative;
+  height: 90vh;
+}
+.header {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background: #FFA500;
+}

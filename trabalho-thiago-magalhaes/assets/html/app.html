@@ -1,0 +1,155 @@
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <title>Meus Cursos</title>
+    <meta name="description" content="App Pos Graduacao">
+    <meta name="author" content="Thiago Magalhaes">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+</head>
+
+<body>
+    <div id="primeira_tela" class="container">
+        <header>
+            <h1>Pos Graduação</h1>
+        </header>
+        <div class="login">
+            <div>
+                <h2>Usuário e senha</h2>
+            </div>
+            <form>
+                <div id="formulario-login">
+                    <input type="text" id="usuario" placeholder="Login">
+                    <input type="text" id="senha" placeholder="Senha">
+                    <button type="submit">Login</button>
+                </div>
+            </form>
+        </div>
+        <footer>Registrar</footer>
+    </div>
+    <div id="segunda_tela" class="container" style="display: none;">
+        <header class="cabecalho">
+            <div class="voltar">
+                <a href="#" class="voltar"><</a>
+            </div>
+            <div class="titulo_tela">
+                <h1>Universidades</h1>
+            </div>
+        </header>
+        <div class="login">
+            <div>
+                <h2>Selecione uma universidade</h2>
+            </div>
+            <div id="lista_contas">
+                <div class="universidade">
+                    <div class="logo">
+                        <img src="img/uft.jpg">
+                    </div>
+                    <div class="info">
+                        <div>Universidade Federal do Tocantins</div>
+                        <div>Cursos: 3</div>
+                        <div>Alunos: 1008</div>
+                    </div>
+                </div>
+                <div class="universidade">
+                    <div class="logo">
+                        <img src="img/uff.jpg">
+                    </div>
+                    <div class="info">
+                        <div>Universidade Federal Fluminense</div>
+                        <div>Cursos: 2</div>
+                        <div>Ingresso: 2011</div>
+                    </div>
+                </div>
+                <div class="universidade">
+                    <div class="logo">
+                        <img src="img/usp.png">
+                    </div>
+                    <div class="info">
+                        <div>Universidade de São Paulo</div>
+                        <div>Cursos: 4</div>
+                        <div>Alunos: 1251</div>
+                    </div>
+                </div>
+                <div class="universidade">
+                    <div class="logo">
+                        <img src="img/unicamp.png">
+                    </div>
+                    <div class="info">
+                        <div>Universidade de Campinas</div>
+                        <div>Cursos: 1</div>
+                        <div>Alunos: 1245</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            Total: 4
+        </footer>
+    </div>
+    <div id="terceira_tela" class="container" style="display: none;">
+        <header class="cabecalho">
+            <div class="voltar">
+                <a href="#" class="voltar"><</a>
+            </div>
+            <div class="titulo_tela">
+                <h1>Lista de cursos</h1>
+            </div>
+        </header>
+
+        <div class="login">
+            <div>
+                <h2>Número de cursos: 5</h2>
+            </div>
+            <div id="lista_transacoes">
+                <div class="curso">
+                    <div class="descricao">
+                        Ciência da Computação
+                    </div>
+                    <div class="valor">
+                        8 periodos
+                    </div>
+                </div>
+                <div class="curso">
+                    <div class="descricao">
+                        Engenharia Mecânica
+                    </div>
+                    <div class="valor">
+                        10 periodos
+                    </div>
+                </div>
+                <div class="curso">
+                    <div class="descricao">
+                        Direito
+                    </div>
+                    <div class="valor">
+                        8 periodos
+                    </div>
+                </div>
+                <div class="curso">
+                    <div class="descricao">
+                        Medicina
+                    </div>
+                    <div class="valor">
+                        10 periodos
+                    </div>
+                </div>
+                <div class="curso">
+                    <div class="descricao">
+                        Engenharia Civil
+                    </div>
+                    <div class="valor">
+                        10 periodos
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            Total: 5
+        </footer>
+    </div>
+    <script src="js/build.js"></script>
+</body>
+
+</html>
