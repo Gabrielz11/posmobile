@@ -4,7 +4,6 @@ import {DBManager} from "../../providers/db-manager";
 
 import {ContatosPage} from "../contatos/contatos";
 import {Pessoa} from "../../classes/Pessoa";
-import {Toast} from "@ionic-native/toast";
 
 /**
  * Generated class for the NovaPessoa page.
@@ -20,7 +19,7 @@ export class PessoaCreatePage {
 
   public pessoa: Pessoa = new Pessoa();
 
-  constructor(public navCtrl: NavController, public dbManager: DBManager, public toast: Toast) {
+  constructor(public navCtrl: NavController, public dbManager: DBManager) {
 
   }
 
@@ -50,7 +49,7 @@ export class PessoaCreatePage {
       };
 
       op.onsuccess = function (event) {
-        this.toast.showShortBottom("Pessoa cadastrada com sucesso!");
+        alert('Pessoa cadastrada com sucesso!');
         db.close()
       };
 

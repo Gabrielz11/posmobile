@@ -8,5 +8,4 @@
 * contatos
 * provider personalizado
 * IndexedDB
-* Toast
 * Diagnostic
