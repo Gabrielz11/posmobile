@@ -19,8 +19,4 @@ export class PessoaDetailsPage {
   constructor(public navParams: NavParams) {
      this.pessoa = navParams.data
   }
-
-  ionViewDidLoad() {
-
-  }
 }

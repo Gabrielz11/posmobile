@@ -1,9 +1,10 @@
 import {Component} from "@angular/core";
-import {NavController, NavParams} from "ionic-angular";
+import {NavController} from "ionic-angular";
 import {DBManager} from "../../providers/db-manager";
 
 import {ContatosPage} from "../contatos/contatos";
 import {Pessoa} from "../../classes/Pessoa";
+import {Toast} from "@ionic-native/toast";
 
 /**
  * Generated class for the NovaPessoa page.
@@ -17,15 +18,21 @@ import {Pessoa} from "../../classes/Pessoa";
 })
 export class PessoaCreatePage {
 
-  public pessoa:Pessoa = new Pessoa();
+  public pessoa: Pessoa = new Pessoa();
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public dbManager: DBManager) {
+  constructor(public navCtrl: NavController, public dbManager: DBManager, public toast: Toast) {
 
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad NovaPessoa');
+  ionViewDidEnter() {
+    this.pessoa.nome = localStorage.contatoTempNome;
+    this.pessoa.endereco = localStorage.contatoTempEndereco;
+    this.pessoa.telefone = localStorage.contatoTempTelefone;
+    localStorage.contatoTempNome = "";
+    localStorage.contatoTempEndereco = "";
+    localStorage.contatoTempTelefone = "";
   }
+
 
   showContacts() {
     this.navCtrl.push(ContatosPage);
@@ -43,7 +50,7 @@ export class PessoaCreatePage {
       };
 
       op.onsuccess = function (event) {
-        alert("inserido com sucesso!");
+        this.toast.showShortBottom("Pessoa cadastrada com sucesso!");
         db.close()
       };
 

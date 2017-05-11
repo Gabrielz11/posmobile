@@ -17,6 +17,8 @@ import {DeviceMotion} from "@ionic-native/device-motion";
 import {Geolocation} from "@ionic-native/geolocation";
 import {GoogleMaps} from "@ionic-native/google-maps";
 import {Contacts} from "@ionic-native/contacts";
+import {Toast} from "@ionic-native/toast";
+import {Diagnostic} from "@ionic-native/diagnostic";
 
 @NgModule({
   declarations: [
@@ -50,6 +52,8 @@ import {Contacts} from "@ionic-native/contacts";
     GoogleMaps,
     Contacts,
     DBManager,
+    Toast,
+    Diagnostic,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

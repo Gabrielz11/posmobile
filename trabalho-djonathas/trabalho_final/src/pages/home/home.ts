@@ -1,7 +1,7 @@
 import {Component} from "@angular/core";
-import {NavController} from "ionic-angular";
+import {LoadingController} from "ionic-angular";
 import {DeviceMotion, DeviceMotionAccelerationData} from "@ionic-native/device-motion";
-import { LoadingController } from 'ionic-angular';
+import {Subscription} from "rxjs/Subscription";
 
 @Component({
   selector: 'page-home',
@@ -9,12 +9,15 @@ import { LoadingController } from 'ionic-angular';
 })
 export class HomePage {
 
-  public dados:DeviceMotionAccelerationData;
-  public loading:boolean = true;
+  public dados: DeviceMotionAccelerationData;
+  public loading: boolean = true;
+  subscription:Subscription;
 
-  constructor(public navCtrl: NavController, public loadingCtrl: LoadingController, public deviceMotion: DeviceMotion) {
+  constructor(public loadingCtrl: LoadingController, public deviceMotion: DeviceMotion) {}
+
+  ionViewDidEnter() {
     // Watch device acceleration
-    this.deviceMotion.watchAcceleration().subscribe((acceleration: DeviceMotionAccelerationData) => {
+    this.subscription = this.deviceMotion.watchAcceleration().subscribe((acceleration: DeviceMotionAccelerationData) => {
       this.dados = acceleration;
     });
 
@@ -31,5 +34,7 @@ export class HomePage {
     }, 10000);
   }
 
-
+  ionViewDidLeave() {
+    this.subscription.unsubscribe()
+  }
 }

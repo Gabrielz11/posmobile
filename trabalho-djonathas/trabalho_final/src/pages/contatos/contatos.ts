@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
-import { Contacts, Contact, ContactFieldType } from '@ionic-native/contacts';
+import {Component} from "@angular/core";
+import {LoadingController, NavController} from "ionic-angular";
+import {Contact, ContactFieldType, Contacts} from "@ionic-native/contacts";
+import {Diagnostic} from "@ionic-native/diagnostic";
 
 /**
  * Generated class for the Contatos page.
@@ -14,9 +15,14 @@ import { Contacts, Contact, ContactFieldType } from '@ionic-native/contacts';
 })
 export class ContatosPage {
 
-  public contactsList:Contact[];
+  public contactsList: Contact[];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public contacts: Contacts) {
+  constructor(public navCtrl: NavController, public contacts: Contacts, public loadingCtrl: LoadingController, public diagnostic: Diagnostic) {
+    this.diagnostic.isContactsAuthorized().then( autorizado => {
+      if (!autorizado) {
+        this.diagnostic.requestContactsAuthorization().catch(e => alert(e));
+      }
+    })
   }
 
   ionViewDidLoad() {
@@ -24,15 +30,30 @@ export class ContatosPage {
   }
 
   loadContacts() {
-    let fields:ContactFieldType[] = ['id'];
+    let loader = this.loadingCtrl.create({
+      content: "Obtendo dados dos contatos..."
+    });
+
+    loader.present();
+
+    let fields: ContactFieldType[] = ['id'];
     let options = {multiple: true};
 
     this.contacts.find(fields, options)
-      .then(data => this.contactsList = data)
-      .catch(error => console.log("erro"));
+      .then(data => {
+        this.contactsList = data;
+        loader.dismiss();
+      })
+      .catch(error => {
+        console.log(error.message);
+        loader.dismiss();
+      });
   }
 
-  getContact(contato:Contact) {
+  getContact(contato: Contact) {
+    localStorage.contatoTempNome = contato.displayName;
+    localStorage.contatoTempEndereco = contato.addresses ? contato.addresses[0].formatted : "";
+    localStorage.contatoTempTelefone = contato.phoneNumbers ? contato.phoneNumbers[0].value : "";
     this.navCtrl.pop();
   }
 }

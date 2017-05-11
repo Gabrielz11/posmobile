@@ -1,5 +1,5 @@
 import {Component} from "@angular/core";
-import {NavController} from "ionic-angular";
+import {LoadingController, NavController} from "ionic-angular";
 import {DBManager} from "../../providers/db-manager";
 
 import {PessoaCreatePage} from "./create";
@@ -20,8 +20,16 @@ export class PessoaListPage {
 
   public pessoas:Pessoa[];
 
-  constructor(public navCtrl: NavController, public dbManager: DBManager) {
+  constructor(public navCtrl: NavController, public dbManager: DBManager, public loadingCtrl: LoadingController) {}
+
+  ionViewDidEnter() {
     let callback = db => {
+      let loader = this.loadingCtrl.create({
+        content: "Obtendo dados dos contatos..."
+      });
+
+      loader.present();
+
       let transaction = db.transaction("pessoas", "readwrite").objectStore("pessoas");
       let op = transaction.getAll();
 
@@ -30,19 +38,17 @@ export class PessoaListPage {
       };
 
       op.onerror = function (event) {
-        alert(op.error)
+        alert(op.error);
+        loader.dismiss();
       };
 
       op.onsuccess = function (event) {
         setPessoas(op.result);
+        loader.dismiss();
       };
     };
 
     this.dbManager.run(callback)
-  }
-
-  ionViewDidLoad() {
-
   }
 
   goToNovo() {
