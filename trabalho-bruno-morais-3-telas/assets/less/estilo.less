@@ -1,0 +1,104 @@
+
+// Outros estilos
+* {
+    box-sizing: border-box;
+    font-family: 'arial';
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2vh 4vw;
+    color: red;
+    background: red;
+}
+
+footer > p {
+    margin: 0;
+    text-align: center;
+    background-color: red;
+    border: 1;
+    font-size: 0.7rem !important;
+}
+
+footer > p:before {
+    font-size: 2.5rem;
+    display: block;
+}
+
+footer > a {
+  color: #ffffff;
+}
+
+.activity {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    background: #EFF0F1;
+}
+
+.panel {
+    display: block;
+    flex-grow: 1;
+      padding: 2vh 4vw;
+    // border: 1px solid red;
+}
+
+.panel-hidden {
+    display: none;
+}
+
+#panel-keyboard {
+    display: flex;
+    flex-direction: column;
+}
+
+#input_keyboard_wrapper {
+    font-size: 2em;
+    padding: 2vh 4vw;
+    // border: 1px solid blue;
+}
+
+#keyboard {
+    @keySize: 12vh;
+    display: grid;
+    grid-template-columns: @keySize @keySize @keySize;
+    grid-auto-rows: @keySize;
+    // align-content: space-around;
+    grid-row-gap: 3vh;
+    justify-content: space-around;
+
+    flex-grow: 1;
+    // border: 1px solid yellow;
+}
+
+.hidden {
+  display: none;
+
+}
+.visible {
+  display: flex;
+  flex-direction:column;
+}
+div.input-group {
+    display: flex;
+    flex-direction:column;
+    padding-bottom: 5px;
+}
+
+label {
+    white-space: nowrap;
+
+}
+
+input {
+
+    flex: 1;
+}

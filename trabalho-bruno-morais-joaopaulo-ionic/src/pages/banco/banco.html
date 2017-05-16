@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar color="danger">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Usuários</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>Cadastro</h2>
+
+  <!-- <form [formGroup]="user" (ngSubmit)="addUser()">
+    <ion-list>
+      <ion-item>
+        <ion-label floating>Nome</ion-label>
+        <ion-input type="text" name="nome" formControlName="nome"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Telefone</ion-label>
+        <ion-input type="phone" name="telefone" formControlName="telefone"></ion-input>
+      </ion-item>
+      <button [disabled]="user.invalid" ion-button full block>Cadastrar</button>
+    </ion-list>
+  </form> -->
+
+  <form #user="ngForm" (ngSubmit)="addUser(user.value)">
+    <ion-list>
+      <ion-item>
+        <ion-label floating>Nome</ion-label>
+        <ion-input type="text" name="nome" ngModel required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Telefone</ion-label>
+        <ion-input type="text" name="telefone" ngModel required></ion-input>
+      </ion-item>
+      <button ion-button block type="submit" [disabled]="user.invalid">Cadastrar</button>
+    </ion-list>
+  </form>
+  <h2> Usuários Cadastrados</h2>
+  <ion-list>
+    <ion-item *ngFor="let user of users" (click)="removeUser(user)">
+      {{user.id}} | {{user.nome}} | {{user.telefone}}
+    </ion-item>
+  </ion-list>
+</ion-content>

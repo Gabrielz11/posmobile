@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Detalhe Contato</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="card-background-page">
+  <ion-card>
+    <img src="{{pessoa.picture.large}}"/>
+    <div class="card-title">{{pessoa.name.first}} {{pessoa.name.last}}</div>
+    <a href="tel:{{pessoa.cell}}">
+      <ion-item>
+        <ion-icon name="ios-call" item-left large></ion-icon>
+        <h2>Telefone</h2>
+        <p>{{pessoa.cell}}</p>
+      </ion-item>
+    </a>
+      <ion-item>
+        <ion-icon name="ios-pin" item-left large></ion-icon>
+        <h2>Endereço</h2>
+        <p>{{pessoa.location.street}} {{pessoa.location.city}} {{pessoa.location.state}}</p>
+      </ion-item>
+    <a href="mail:{{pessoa.email}}">
+      <ion-item>
+        <ion-icon name="ios-mail" item-left large></ion-icon>
+        <h2>Email</h2>
+        <p>{{pessoa.email}}</p>
+      </ion-item>
+    </a>
+  </ion-card>
+</ion-content>

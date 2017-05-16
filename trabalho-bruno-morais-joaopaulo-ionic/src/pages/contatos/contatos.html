@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar color="danger">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Contatos</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list *ngIf="contactsList">
+    <ion-item *ngFor="let contact of contactsList">
+      <ion-avatar item-left>
+        <ion-icon name="person"></ion-icon>
+      </ion-avatar>
+      <h2>{{ contact.id }} - {{ contact.name.formatted }}</h2>
+      <p>teste</p>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Add Local</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <form (ngSubmit)="onAddPlace(f.value)" #f="ngForm">
+    <ion-item>
+      <ion-label>Nome</ion-label>
+      <ion-input type="text" name="title" ngModel required></ion-input>
+    </ion-item>
+    <button ion-button block type="submit" [disabled]="!f.valid">Add Locale</button>
+  </form>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col><button ion-button block (click)="onLocateUser()">Pegar meu local</button></ion-col>
+    </ion-row>
+    <!-- <ion-row>
+      <ion-col><p>Your Location: {{ location?.coords.latitude}} / {{ location?.coords.longitude}}</p></ion-col>
+    </ion-row> -->
+  </ion-grid>
+  <h2>Digite o nome depois clique para pegar o local, depois é só adicionar</h2>
+
+
+</ion-content>
