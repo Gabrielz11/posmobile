@@ -1,0 +1,99 @@
+  //Código less do app
+
+  // Cores
+  @colorGray: #666666;
+  @colorLightGray: #888888;
+  @colorDanger: #ff0000;
+  @colorBlue: #283593;
+  @colorGreen: #4CAF50;
+  @colorLightBlue: #28aadc;
+  @colorConfirm: @colorGreen;
+
+  // Outros estilos
+  @border: 1px solid @colorLightGray;
+  @borderRadius: 0.25em;
+  @borderColorActive: #3CB371;
+  @boxShadowActive: inset 0 1px 1px rgba(0,0,0,.075), 0 0 0.2em rgba(60,179,113, 0.6);
+  @boxShadowDanger: inset 0 1px 1px rgba(0,0,0,.075), 0 0 0.2em rgba(255,0,0, 0.6);
+
+  * {
+      box-sizing: border-box;
+      font-family: 'arial';
+  }
+
+  html, body {
+      margin: 0;
+      padding: 0;
+  }
+
+  //Activity
+  div.activity {
+      display: none;
+      flex-direction: column;
+      height: 100vh;
+      width: 100vw;
+
+    	//App Bar
+      div.appbar {
+  	    width: 100vw;
+  	    height: 8vh;
+  	    background: @colorBlue;
+  	    display: flex;
+  	    flex-direction: column;
+  	    justify-content: center;
+
+        	//App Bar Title
+  	    span.app-title {
+  	    	font-size: 16px;
+  	    	font-weight: bold;
+  	    	color: #FFF;
+  	    	margin-left: 16px;
+        	}
+  	}
+
+  	//Body do App
+  	div.appcontent {
+  		width: 100vw;
+  		height: 100vh;
+  		background: @colorGray;
+  		display: flex;
+  		flex-direction: column;
+  	}
+  }
+
+  .activity {
+  	display: flex;
+    flex-direction: column;
+  }
+
+  div.hidden {
+    display: none;
+  }
+
+  div.visible {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // Container Base
+  div.container {
+  	width: 100vw;
+  	height: 100vh;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	justify-content: center;
+  }
+
+  // Texto de Apresentação
+  span.welcome-text {
+  	font-size: 24px;
+  	font-weight: bold;
+  	color: #FFF;
+  }
+
+  // Botão Suspenso
+  a.button-raised {
+  	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  	font-weight: bold;
+  }
