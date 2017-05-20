@@ -1,0 +1,51 @@
+<!--
+  Generated template for the ContatoDetail page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Detalhes</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-card>
+    <img src="{{contato.picture.large}}"/>
+    <ion-card-content>
+      <ion-card-title class="capitalize">
+        Nome: {{contato.name.title}} {{contato.name.first}} {{contato.name.last}}
+        </ion-card-title>
+      <p>
+        Email: {{contato.email}}
+      </p>
+    </ion-card-content>
+    <ion-row>
+      <ion-col class="capitalize">
+        <p>
+          <b>Cidade: </b>{{contato.location.city}}
+        </p>
+        <p>
+          <b>Estado: </b>{{contato.location.state}}
+        </p>
+        <p>
+          <b>Endereço: </b>{{contato.location.street}}
+        </p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <button ion-button clear icon-left small (click)="showMap(contato.name.first)">
+          <ion-icon name="map"></ion-icon>
+          Mostrar Localização
+        </button>
+      </ion-col>
+    </ion-row>
+
+
+</ion-card>
+</ion-content>
