@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  padding: 10px;
+  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background: #2f2f2f;
+  color: #cacaca;
+  font-size: 16px;
+  text-shadow: 0 1px 0 #101010;
+}
+body .menu {
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.6);
+  padding: 15px 0;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: black;
+  text-align: center;
+  font-weight: bold;
+  font-family: arial, verdana, sans-serif;
+}
+body .menu span {
+  color: #222222;
+  margin: 3px;
+  padding: 10px 20px 10px 20px;
+  background: #f5f5f5;
+  cursor: pointer;
+  text-shadow: 0 0 0 #000;
+}
+body .visivel {
+  display: block;
+}
+body .oculto {
+  display: none;
+}
+body #pagina1 .logo {
+  width: 50%;
+  margin: auto;
+}
+body #pagina1 .logo img {
+  width: 100%;
+}
+body #pagina2 #mapa {
+  width: 100%;
+  height: 350px;
+}
+body #pagina3 fieldset {
+  border-color: white;
+}
+body #pagina3 label {
+  display: block;
+  font-weight: bolder;
+  padding-bottom: 5px;
+}
+body #pagina3 input {
+  background-color: #ffffff;
+  margin: 0 0 15px 0;
+}
+body #pagina3 textarea {
+  display: block;
+  margin: 0 0 15px 0;
+}
+body #pagina3 button {
+  display: block;
+  padding: 15px 50px ;
+  font-weight: bold;
+  background-color: forestgreen;
+  color: white;
+  text-shadow: 0 1px 0 #101010;
+}

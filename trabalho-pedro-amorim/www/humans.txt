@@ -1,0 +1,16 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+                             
+Your title: Pedro Amorim.
+Location: Palmas, Brasil.
+
+# THANKS
+
+Names: MotoClubes e MotoGrupos do Tocantins
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5
+    Normalize.css
