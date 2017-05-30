@@ -1,0 +1,25 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Cadastrar Contato</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+  <ion-input [(ngModel)]="newContact.givenName" name="givenName" type="text" placeholder="Nome do contato"></ion-input>
+  <ion-input [(ngModel)]="newContact.familyName" name="familyName" type="text" placeholder="Sobrenome do contato"></ion-input>
+  <ion-input [(ngModel)]="newContact.nickname" name="nickname" type="text" placeholder="Apelido do contato"></ion-input>
+  <ion-input [(ngModel)]="newContact.phnumber" name="phnumber" [brmasker]="{mask:'00 00000 0000', len:13}" type="number" placeholder="Número do contato"></ion-input>
+  <ion-list>
+    <ion-item>
+      <ion-label>Tipo</ion-label>
+      <ion-select [(ngModel)]="newContact.phtype" name="phtype">
+        <ion-option value="home">Casa</ion-option>
+        <ion-option value="work">Trabalho</ion-option>
+        <ion-option value="other">Outro</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <button ion-button round block (click)="addContact(newContact)">Cadastrar</button>
+</ion-content>

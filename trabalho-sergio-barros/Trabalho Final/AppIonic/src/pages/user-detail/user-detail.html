@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Detalhes do Usuário
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid align-items-center>
+    <ion-list>
+      <ion-item>
+        <ion-label floating>Nome</ion-label>
+        <ion-input type="text" [(ngModel)]="selectedItem.nome"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Email</ion-label>
+        <ion-input type="text" [(ngModel)]="selectedItem.email"></ion-input>
+      </ion-item>
+    </ion-list>
+  </ion-grid>
+
+  <ion-grid padding>
+    <button (click)="update(selectedItem.nome, selectedItem.email, selectedItem.id)" ion-button round>Atualizar</button>
+    <button (click)="delete(selectedItem.id)" ion-button color="danger" round>Deletar</button>
+  </ion-grid>
+</ion-content>

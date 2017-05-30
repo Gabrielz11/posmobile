@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Meus Jogos
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-fab top right text-center edge>
+    <button [navPush]="gameFormPage" color="vibrant" ion-fab>
+      <ion-icon name="add"></ion-icon>
+    </button>
+    <button (click)="load()" color="vibrant" ion-fab mini>
+      <ion-icon name="refresh"></ion-icon>
+    </button>
+  </ion-fab>
+
+  <ion-grid align-items-center>
+    <ion-card *ngIf="games?.length == 0">
+      <ion-card-header>
+        Nenhum registro foi localizado!
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card *ngFor="let game of games" (click)="itemTapped($event, game)">
+      <ion-card-header>
+        {{game?.numbers ? 'Numeros: '+game?.numbers : ''}}
+      </ion-card-header>
+      <ion-card-content>
+        <div>{{game?.concurso ? 'Concurso: '+game?.concurso : ''}}</div>
+        <div>{{game?.data_sorteio ? 'Data Sorteio: '+(game?.data_sorteio | date:'dd/MM/yyyy') : ''}}</div>
+      </ion-card-content>
+    </ion-card>
+
+  </ion-grid>
+
+</ion-content>

@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Detalhes da Notícia</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div *ngIf="selectedItem" class="selection">
+    <img *ngIf="selectedItem?.better_featured_image?.media_details?.sizes?.medium?.source_url"
+         [src]="selectedItem?.better_featured_image?.media_details?.sizes?.medium?.source_url"
+         [alt]="selectedItem?.title.rendered">
+    <h2 [innerHTML]="selectedItem.title.rendered"></h2>
+    <div [innerHTML]="selectedItem.content.rendered"></div>
+  </div>
+</ion-content>

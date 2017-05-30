@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Detalhes do Sorteio
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid align-items-center>
+    <ion-card>
+      <ion-card-header>
+        Concurso: {{selectedMapItem?.acf?.concurso}} - {{selectedMapItem?.acf?.data_sorteio}}
+      </ion-card-header>
+      <ion-card-content>
+        <div>Localização: {{selectedMapItem?.acf?.cidade}} - {{selectedMapItem?.acf?.estado}}</div>
+        <div>Números: {{selectedMapItem?.acf?.numeros}}</div>
+        <div>Prêmio:  {{selectedMapItem?.acf?.valor}}</div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-content class="map">
+        <div #map2 id="map2" style="height:150px;"></div>
+      </ion-card-content>
+    </ion-card>
+  </ion-grid>
+
+</ion-content>

@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Lista de Usuários
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-fab top right text-center edge>
+    <button [navPush]="userFormPage" color="vibrant" ion-fab>
+      <ion-icon name="add"></ion-icon>
+    </button>
+    <button (click)="load()" color="vibrant" ion-fab mini>
+      <ion-icon name="refresh"></ion-icon>
+    </button>
+  </ion-fab>
+
+  <ion-grid align-items-center>
+    <ion-card *ngIf="users?.length == 0">
+      <ion-card-header>
+        Nenhum registro foi localizado!
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card *ngFor="let user of users" (click)="itemTapped($event, user)">
+      <ion-card-header>
+        {{user?.nome ? 'Nome: '+user?.nome : ''}}
+      </ion-card-header>
+      <ion-card-content>
+        {{user?.email ? 'E-mail: '+user?.email : ''}}
+      </ion-card-content>
+    </ion-card>
+  </ion-grid>
+</ion-content>
