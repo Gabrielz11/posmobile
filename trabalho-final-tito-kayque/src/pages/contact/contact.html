@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Contact
+    </ion-title>
+     <ion-buttons end>
+      <button ion-button tappable icon-only (click)="addContact()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="home">
+  <ion-list>
+    <button ion-item tappable *ngFor="let item of contactList">
+      {{ item.name.formatted }}
+  </button>
+  </ion-list>
+</ion-content>
