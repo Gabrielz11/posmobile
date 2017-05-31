@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Media</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <button ion-button outline icon-left icon-only (click)="playFile()">
+        <ion-icon name='play' class="ion-play" is-active="false"></ion-icon>
+    </button>
+    <button ion-button outline icon-center icon-only (click)="pauseFile()">
+        <ion-icon name='pause' class="ion-pause" is-active="false"></ion-icon>
+    </button>
+    <button ion-button outline icon-right icon-only (click)="stopFile()">
+        <ion-icon name='square' class="ion-stop" is-active="false"></ion-icon>
+    </button>
+
+    <ion-item>
+      <ion-range [(ngModel)]="volume" color="danger" pin="true"></ion-range>
+    </ion-item>
+
+    <ion-item>
+      <ion-range [(ngModel)]="singleValue" color="danger" pin="true"></ion-range>
+    </ion-item>
+
+    <ion-item>
+      <ion-range min="-200" max="200" [(ngModel)]="saturation" color="secondary">
+        <ion-label range-left>-200</ion-label>
+        <ion-label range-right>200</ion-label>
+      </ion-range>
+    </ion-item>
+
+</ion-content>
