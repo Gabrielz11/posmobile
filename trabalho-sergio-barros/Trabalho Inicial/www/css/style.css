@@ -1,0 +1,185 @@
+body {
+  margin: 0;
+  padding: 0;
+  font: 18px Helvetica;
+  overflow-x: hidden;
+  background-color: #fcfcfc;
+}
+
+header {
+  min-height: 10vw;
+}
+
+footer {
+  min-height: 55px;
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+}
+
+header, footer {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+    background: #209869;
+}
+
+header a, footer a,
+header h4, footer h4 {
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    color: #fff;
+}
+
+#container-flex {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#main {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    align-content: stretch;
+    overflow: scroll;
+}
+
+#main > article {
+    width: 100vw;
+    padding: 5px;
+    flex: flex;
+    align-items: center;
+    order: 2;
+}
+#main > article > .content{
+    padding: 10px;
+}
+
+#main > nav {
+    padding: 5px;
+    background: #673ab7;
+    flex: 1 6 20%;
+    order: 1;
+    
+}
+
+#main > aside {
+    padding: 5px;
+    background: #673ab7;
+    flex: 1 6 20%;
+    order: 3;
+}
+
+.app-navbar-item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.app-navbar-item span {
+    font-size: 10pt;
+}
+
+.page-2 .title {
+    margin-top: 20px;
+}
+
+.page-3 .card-content span {
+    font-size: 10pt;
+}
+
+.mega-sena {
+    justify-content: center;
+    display: flex;
+    padding: 22px 0;
+    margin: 0px;
+}
+
+.row {
+    margin-bottom: 0px;
+}
+
+.card .card-content {
+    padding: 5px 24px;
+}
+
+.card-content span {
+    font-size: 12px;
+}
+
+.card-content-title {
+    background-color: #cecece ;
+    padding: 2px 0;
+}
+
+.card-content-title h5 {
+    font-size: 16pt;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+.mega-sena > li,
+.mega-sena-winner{
+    background: #209869;
+}
+
+.resultado-loteria p {
+    display: flex;
+    justify-content: center;
+    color: #828282;
+    font-size: 12pt;
+    padding: 4pt;
+    margin-bottom: -8pt;
+    background-color: #f7f7f7;
+}
+
+.resultado-loteria > .numbers > li {
+    display: inline-block;
+    margin: 0 8px 0 0;
+    font-family: "FuturaWeb",sans-serif;
+    font-size: 12pt;
+    color: #fff;
+    background: #209869;
+    border-radius: 35px;
+    width: 38px;
+    height: 38px;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* pg 2 */
+.content-detalhes p {
+    text-align: justify;
+    font-size: 11pt;
+    line-height: 14pt;
+}
+
+.content-detalhes h5 {
+    border-bottom: 1px solid #e4e4e4;
+    padding-bottom: 10px;
+    color: #209869;
+}
+
+.content-detalhes h6 {
+    font-weight: 600;
+    font-size: 11pt;
+}
+
+/* pg 3 */
+td, th {
+    font-size: 10pt;
+}
+
+.mb-55 {
+    margin-bottom: 55px;
+}

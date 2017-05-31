@@ -1,0 +1,50 @@
+<!doctype html>
+
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+
+  <title>The HTML5 Herald</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <div id="Tela1" class="telas tela1">
+                <div class="foto"><p>FOTO</p></div>
+                <div class="sidemenu"><p>MENU</p></div>
+                <div class="feed"><p>FEED</p></div>
+            </div>
+
+            <div id="Tela2" class="telas tela2">
+                <div class="top"><p>TOP</p></div>
+                <div class="middle"><p>MIDDLE</p></div>
+                <div class="footer"><p>FOOTER</p></div>
+            </div>
+
+            <div id="Tela3" class="telas tela3">
+                <div class="topo"><p>TOPO</p></div>
+                <div class="sidemenu2"><p>SIDE MENU</p></div>
+                <div class="conteudo"><p>CONTEUDO</p></div>
+            </div>
+        </div>
+        <div class="menu">
+            <button class="tablinks item1 " onclick="changeMenu(event,'Tela1')">Tela 1</button>
+            <button class="tablinks item2 " onclick="changeMenu(event,'Tela2')">Tela 2</button>
+            <button class="tablinks item3 " onclick="changeMenu(event,'Tela3')">Tela 3</button>
+        </div>
+    </div>
+
+  <!-- Load the script before the page content -->
+  <script src="js/app.js"></script>
+</body>
+</html>
