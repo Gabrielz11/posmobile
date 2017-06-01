@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Contatos
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="map">
+  <ion-fab top right text-center edge>
+    <button [navPush]="contactFormPage" color="vibrant" ion-fab>
+      <ion-icon name="add"></ion-icon>
+    </button>
+    <button (click)="getContact()" color="vibrant" ion-fab mini>
+      <ion-icon name="refresh"></ion-icon>
+    </button>
+  </ion-fab>
+  <ion-list *ngIf="contactsList">
+    <button ion-item *ngFor="let contact of contactsList" (click)="getContact(contact)">
+      {{ contact.name?.formatted }}
+      <!--{{ contact.phoneNumbers[0]?.value?.formatted }}-->
+      <!--{{ contact.emails?.formatted }}-->
+    </button>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,32 @@
+npm i -g cordova
+
+npm i -g ionic@latest
+
+npm i --save-dev --save-exact @ionic/cli-plugin-cordova@latest
+npm i --save-dev --save-exact @ionic/cli-plugin-ionic-angular@latest
+
+npm i --save-dev node-sass
+
+## Examples codes / github
+https://github.com/candelibas/awesome-ionic2
+https://github.com/ionic2blueprints/ionic2-wp-client
+https://github.com/scottopolis/ionic2-wp-api
+https://github.com/paulocanedo/posmobile
+
+C:\Program Files (x86)\Java\jre1.8.0_131\bin> keytool -list -v -keystore "C:\Users\SergioBarros\.android\debug.keystore" -alias androiddebugkey -storepass android -keypass android
+
+cordova plugin rm cordova-plugin-googlemaps
+cordova plugin rm com.googlemaps.ios
+cordova plugin add cordova-plugin-googlemaps --variable API_KEY_FOR_ANDROID="AIzaSyALkJfS3tLXyquGaXef0cWp-CpHlMfYjEI" --variable API_KEY_FOR_IOS="AIzaSyALkJfS3tLXyquGaXef0cWp-CpHlMfYjEI"
+
+npm install --save @ionic-native/google-maps
+
+cordova prepare
+npm install
+
+cordova platform add android
+
+ionic cordova plugin add cordova-plugin-googlemaps --variable API_KEY_FOR_ANDROID="AIzaSyB8oVgow8oHD39XeWZhvQSU00IeUBLvrUU" --variable API_KEY_FOR_IOS="AIzaSyB8oVgow8oHD39XeWZhvQSU00IeUBLvrUU"
+cordova plugin add https://github.com/phonegap-googlemaps-plugin/cordova-plugin-googlemaps --variable API_KEY_FOR_ANDROID="AIzaSyALkJfS3tLXyquGaXef0cWp-CpHlMfYjEI" --variable API_KEY_FOR_IOS="AIzaSyALkJfS3tLXyquGaXef0cWp-CpHlMfYjEI"
+
+

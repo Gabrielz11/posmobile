@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Novo Jogos
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid align-items-center>
+    <ion-list>
+      <ion-item>
+        <ion-label floating>Números do Jogo</ion-label>
+        <ion-input type="text" [(ngModel)]="numeros" [textMask]="{mask: maskNumber, guide: false}"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Concurso</ion-label>
+        <ion-input type="number" [(ngModel)]="concurso" [textMask]="{mask: maskConcurso, guide: false}" ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Data do Sorteio</ion-label>
+        <ion-datetime #data [(ngModel)]="datasorteio" displayFormat="DD/MM/YYYY" pickerFormat="DD/MM/YYYY"></ion-datetime>
+      </ion-item>
+    </ion-list>
+
+    <button (click)="create(numeros, concurso, datasorteio)" ion-button round>Cadastrar</button>
+  </ion-grid>
+</ion-content>

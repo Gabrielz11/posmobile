@@ -1,0 +1,194 @@
+@base: #ecf0f1;
+@menubg: #3498db;
+@menutext: #ecf0f1;
+
+body{
+    overflow-x: hidden;
+    background-color: @base;
+    margin: 0px;
+    padding: 0px;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: 85vh auto;
+    height: 90vh;
+    width: 90vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    width: 90vw;
+    align-self: flex-end;
+}
+
+.item1{
+    flex-grow: 1;
+    background-color: @menubg;
+    border: solid 1px @base;
+    color: @menutext;
+    height: 5vh;
+    align-content: center;
+    text-align: center;
+}
+.item2{
+    flex-grow: 1;
+    background-color: @menubg;
+    border: solid 1px @base;
+    color: @menutext;
+    height: 5vh;
+}
+.item3{
+    flex-grow: 1;
+    background-color: @menubg;
+    border: solid 1px @base;
+    color: @menutext;
+    height: 5vh;
+}
+
+.telas{
+    display: none;
+}
+
+.content {
+    display: flex;
+    margin: 0 auto;
+    position: relative;
+}
+
+// Estilos da tela 1
+.tela1{
+    display: none;
+    grid-template-columns: 35vw 70vw;
+    grid-template-rows: 25vh 55vh;
+}
+
+.tela1 .foto{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    align-self: stretch;
+    background-color: #3498db;
+}
+
+.tela1 .foto p{
+    text-align: center;
+}
+
+.tela1 .sidemenu {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    background-color: #e74c3c;
+}
+
+.tela1 .sidemenu p{
+    text-align: center;
+}
+
+.tela1 .feed {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: span 2;
+    background-color: #27ae60;
+}
+
+.tela1 .feed p{
+    text-align: center;
+}
+
+// Estilos da tela 2
+.tela2{
+    display: none;
+    grid-template-columns: 100vw;
+    grid-template-rows: 15vh 50vh 15vh;
+}
+
+.tela2 .top{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    align-self: stretch;
+    background-color: #1abc9c;
+}
+
+.tela2 .top p{
+    text-align: center;
+}
+
+.tela2 .middle {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    background-color: #e74c3c;
+}
+
+.tela2 .middle p{
+    text-align: center;
+}
+
+.tela2 .footer {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 3;
+    grid-row-end: 3;
+    background-color: #27ae60;
+}
+
+.tela2 .footer p{
+    text-align: center;
+}
+
+// Estilos da tela 3
+.tela3{
+    display: none;
+    grid-template-columns: 20vw 80vw;
+    grid-template-rows: 15vh 65vh;
+}
+
+.tela3 .topo{
+    grid-column-start: 1;
+    grid-column-end: span 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    align-self: stretch;
+    background-color: #1abc9c;
+}
+
+.tela3 .topo p{
+    text-align: center;
+}
+
+.tela3 .sidemenu2 {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    background-color: #e74c3c;
+}
+
+.tela3 .sidemenu2 p{
+    text-align: center;
+}
+
+.tela3 .conteudo {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    background-color: #27ae60;
+}
+
+.tela3 .conteudo p{
+    text-align: center;
+}

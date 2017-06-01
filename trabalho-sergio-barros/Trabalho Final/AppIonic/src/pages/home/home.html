@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Início
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="home">
+
+  <ion-card *ngFor="let item of items" (click)="itemTapped($event, item)">
+    <ion-item>
+      <ion-thumbnail item-left>
+        <img *ngIf="item?.better_featured_image?.media_details?.sizes?.thumbnail?.source_url"
+             [src]="item?.better_featured_image?.media_details?.sizes?.thumbnail?.source_url"
+             [alt]="item?.title.rendered">
+      </ion-thumbnail>
+      <!--<ion-card-content>-->
+        <h2 text-wrap [innerHTML]="item?.title.rendered"></h2>
+        <ion-row>
+          <ion-col>
+            <ion-icon color="primary" name='thumbs-up'></ion-icon>
+            <ion-note>
+              {{item?.featured_media}}
+            </ion-note>
+          </ion-col>
+          <ion-col>
+            <ion-icon color="primary" name='text'></ion-icon>
+            <ion-note>
+              {{item?.id}}
+            </ion-note>
+          </ion-col>
+          <ion-col>
+            <ion-icon color="primary" name='calendar'></ion-icon>
+            <ion-note>
+              {{item?.date | date:'dd/MM/yy' }}
+            </ion-note>
+          </ion-col>
+        </ion-row>
+    </ion-item>
+  </ion-card>
+
+</ion-content>
